@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestido de Verano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #add8e6;
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            margin: 10px 0 20px;
+            font-size: 1.2em;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            margin-bottom: 60px; /* add margin to avoid overlap with footer */
+        }
+        .item {
+            display: contents;
+        }
+        .item img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+        }
+        .item div {
+            flex: 1;
+            max-width: 600px;
+        }
+        .item h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .item p {
+            margin: 10px 0;
+        }
+        .item button {
+            padding: 10px 20px;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .item button:hover {
+            background-color: #90c1e0;
+        }
+        footer {
+            background-color: #add8e6;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .dropdown button {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .dropdown button:hover {
+            background-color: #444;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Vestido de Verano</h1>
+    <h2>Encuentra el mejor vestido para el verano</h2>
+    <div class="dropdown">
+        <button onclick="toggleMenu()">Menú</button>
+        <div id="dropdownContent" class="dropdown-content">
+            <a href="index.html">Inicio</a>
+            <a href="vestido-de-verano.html" target="_blank">Vestido de Verano</a>
+            <a href="vestido-de-fiesta.html" target="_blank">Vestido de Fiesta</a>
+            <a href="vestido-casual.html" target="_blank">Vestido Casual</a>
+            <a href="vestido-formal.html" target="_blank">Vestido Formal</a>
+            <a href="vestido-bohemio.html" target="_blank">Vestido Bohemio</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="item">
+        <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71jN27mYlhL._AC_UY879_.jpg" alt="Vestido de Verano">
+        </a>
+        <div>
+            <h3>Vestido de Verano</h3>
+            <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
+            <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+    <div class="item">
+        <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71jN27mYlhL._AC_UY879_.jpg" alt="Vestido de Verano">
+        </a>
+        <div>
+            <h3>Vestido de Verano</h3>
+            <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
+            <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+    <div class="item">
+        <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71jN27mYlhL._AC_UY879_.jpg" alt="Vestido de Verano">
+        </a>
+        <div>
+            <h3>Vestido de Verano</h3>
+            <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
+            <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+    <div class="item">
+        <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71jN27mYlhL._AC_UY879_.jpg" alt="Vestido de Verano">
+        </a>
+        <div>
+            <h3>Vestido de Verano</h3>
+            <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
+            <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+    <div class="item">
+        <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71jN27mYlhL._AC_UY879_.jpg" alt="Vestido de Verano">
+        </a>
+        <div>
+            <h3>Vestido de Verano</h3>
+            <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
+            <a href="https://www.amazon.es/riou-Vestido-Mujer-Verano-Elegante/dp/B0CTHM1QMP?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=NKZQVFMBEDHM&dib=eyJ2IjoiMSJ9.7DsWnogosAXkDAy4gr1m8rXjd7alNLZFaMfIZQEzA1PbUIYzyST31KYpIdQLLvgcNKrGzqrja_lExTdmberphc4rn7gIIiaug1ZwAXA0SyP-QCaW_ScgALaNTUs_vFz-Vku0AGXiXqX-9hrCDexgazdrmVsRP5YbOd6TIgqhdphqrgcNFCnp8dRy8s6SxpzNJDmKXZmy5M_Um9kgPbdOJbPWK5T0nD2xHxmKcHK1TQ_J_XffrirNqQ-PHqyreyYdmqN_XFhjX6KvzOnHFtz3GgufpM9PzBqC5ay_TJ2Un9M.JC7KMmrilg1_4cXvv1W-3yUxmWjoPlzxE6pwhMLXF1I&dib_tag=se&keywords=vestido+de+verano&qid=1719584096&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=vestido+de+verano%2Caps%2C115&sr=8-7&linkCode=ll1&tag=m0eba9-21&linkId=e77be4a1b5053161637696eb100e699e&language=es_ES&ref_=as_li_ss_tl" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Vestidos Bonitos. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("dropdownContent").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown button')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+
+</html>
