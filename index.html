@@ -16,6 +16,7 @@
             color: #333;
             padding: 20px 0;
             text-align: center;
+            position: relative;
         }
         h1 {
             margin: 0;
@@ -30,23 +31,23 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 60px; /* Espacio inferior para evitar superposición con el pie de página */
         }
         .item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: contents;
         }
         .item img {
             width: 150px;
             height: auto;
             cursor: pointer;
+            margin: 0 auto;
+            display: block;
         }
         .item div {
             flex: 1;
+            max-width: 400px; /* Reduce el ancho de la descripción */
         }
         .item h3 {
             margin: 0;
@@ -70,9 +71,44 @@
             color: #333;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative;
             width: 100%;
-            bottom: 0;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .dropdown button {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .dropdown button:hover {
+            background-color: #444;
+        }
+        .show {
+            display: block;
         }
     </style>
 </head>
@@ -81,12 +117,22 @@
 <header>
     <h1>Estilos de Vestidos Populares</h1>
     <h2>Encuentra el mejor vestido para el momento adecuado y al mejor precio</h2>
+    <div class="dropdown">
+        <button onclick="toggleMenu()">Menú</button>
+        <div id="dropdownContent" class="dropdown-content">
+            <a href="vestido-de-verano" target="_blank">Vestido de Verano</a>
+            <a href="vestido-de-fiesta" target="_blank">Vestido de Fiesta</a>
+            <a href="vestido-casual" target="_blank">Vestido Casual</a>
+            <a href="vestido-formal" target="_blank">Vestido Formal</a>
+            <a href="vestido-bohemio" target="_blank">Vestido Bohemio</a>
+        </div>
+    </div>
 </header>
 
 <div class="container">
     <div class="item">
         <a href="vestido-de-verano" target="_blank">
-            <img src="imagen1.jpg" alt="Vestido de Verano">
+            <img src="imagen/vestido-de-verano/imagen1.jpg" alt="Vestido de Verano">
         </a>
         <div>
             <h3>Vestido de Verano</h3>
@@ -98,7 +144,7 @@
     </div>
     <div class="item">
         <a href="vestido-de-fiesta" target="_blank">
-            <img src="imagen2.jpg" alt="Vestido de Fiesta">
+            <img src="imagen/vestido-de-fiesta/imagen1.jpg" alt="Vestido de Fiesta">
         </a>
         <div>
             <h3>Vestido de Fiesta</h3>
@@ -110,7 +156,7 @@
     </div>
     <div class="item">
         <a href="vestido-casual" target="_blank">
-            <img src="imagen3.jpg" alt="Vestido Casual">
+            <img src="imagen/vestido-casual/imagen1.jpg" alt="Vestido Casual">
         </a>
         <div>
             <h3>Vestido Casual</h3>
@@ -122,7 +168,7 @@
     </div>
     <div class="item">
         <a href="vestido-formal" target="_blank">
-            <img src="imagen4.jpg" alt="Vestido Formal">
+            <img src="imagen/vestido-formal/imagen1.jpg" alt="Vestido Formal">
         </a>
         <div>
             <h3>Vestido Formal</h3>
@@ -134,7 +180,7 @@
     </div>
     <div class="item">
         <a href="vestido-bohemio" target="_blank">
-            <img src="imagen5.jpg" alt="Vestido Bohemio">
+            <img src="imagen/vestido-bohemio/imagen1.jpg" alt="Vestido Bohemio">
         </a>
         <div>
             <h3>Vestido Bohemio</h3>
@@ -149,6 +195,24 @@
 <footer>
     2024 &copy; Estilos de Vestidos Populares
 </footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("dropdownContent").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown button')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
