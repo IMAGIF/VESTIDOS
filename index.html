@@ -32,23 +32,8 @@
             gap: 20px;
             padding: 20px;
         }
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .text-container {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
         .item {
-            display: flex;
-            gap: 20px;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: contents; /* Use display: contents to make the grid rows contain both columns */
         }
         .item img {
             width: 150px;
@@ -140,68 +125,64 @@
 </header>
 
 <div class="container">
-    <div class="image-container">
+    <div class="item">
         <a href="vestido-de-verano" target="_blank">
             <img src="imagen1.jpg" alt="Vestido de Verano">
         </a>
+        <div>
+            <h3>Vestido de Verano</h3>
+            <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
+            <a href="vestido-de-verano" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+    <div class="item">
         <a href="vestido-de-fiesta" target="_blank">
             <img src="imagen2.jpg" alt="Vestido de Fiesta">
         </a>
+        <div>
+            <h3>Vestido de Fiesta</h3>
+            <p>Vestido elegante, utilizado para eventos y celebraciones, con detalles como lentejuelas o encajes.</p>
+            <a href="vestido-de-fiesta" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+    <div class="item">
         <a href="vestido-casual" target="_blank">
             <img src="imagen3.jpg" alt="Vestido Casual">
         </a>
+        <div>
+            <h3>Vestido Casual</h3>
+            <p>Vestido informal, adecuado para el día a día, con diseños simples y cómodos.</p>
+            <a href="vestido-casual" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+    <div class="item">
         <a href="vestido-formal" target="_blank">
             <img src="imagen4.jpg" alt="Vestido Formal">
         </a>
+        <div>
+            <h3>Vestido Formal</h3>
+            <p>Vestido adecuado para ocasiones formales y laborales, generalmente de colores sobrios.</p>
+            <a href="vestido-formal" target="_blank">
+                <button>Ver más</button>
+            </a>
+        </div>
+    </div>
+    <div class="item">
         <a href="vestido-bohemio" target="_blank">
             <img src="imagen5.jpg" alt="Vestido Bohemio">
         </a>
-    </div>
-    <div class="text-container">
-        <div class="item">
-            <div>
-                <h3>Vestido de Verano</h3>
-                <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
-                <a href="vestido-de-verano" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
-        </div>
-        <div class="item">
-            <div>
-                <h3>Vestido de Fiesta</h3>
-                <p>Vestido elegante, utilizado para eventos y celebraciones, con detalles como lentejuelas o encajes.</p>
-                <a href="vestido-de-fiesta" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
-        </div>
-        <div class="item">
-            <div>
-                <h3>Vestido Casual</h3>
-                <p>Vestido informal, adecuado para el día a día, con diseños simples y cómodos.</p>
-                <a href="vestido-casual" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
-        </div>
-        <div class="item">
-            <div>
-                <h3>Vestido Formal</h3>
-                <p>Vestido adecuado para ocasiones formales y laborales, generalmente de colores sobrios.</p>
-                <a href="vestido-formal" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
-        </div>
-        <div class="item">
-            <div>
-                <h3>Vestido Bohemio</h3>
-                <p>Vestido con estilo relajado y libre, a menudo con estampados florales y materiales sueltos.</p>
-                <a href="vestido-bohemio" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
+        <div>
+            <h3>Vestido Bohemio</h3>
+            <p>Vestido con estilo relajado y libre, a menudo con estampados florales y materiales sueltos.</p>
+            <a href="vestido-bohemio" target="_blank">
+                <button>Ver más</button>
+            </a>
         </div>
     </div>
 </div>
