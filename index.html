@@ -19,8 +19,13 @@
         header, footer {
             background-color: #002366; /* Azul oscuro */
             color: white;
-            position: relative;
             text-align: center;
+            width: 100%;
+        }
+        header .wrapper, footer .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
             padding: 60px 0; /* Altura de la cabecera ajustada */
@@ -36,15 +41,14 @@
             max-width: 100%; /* Ajuste máximo al ancho del contenedor */
         }
         .menu-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 20px 40px; /* Tamaño del botón duplicado */
+            position: relative;
+            padding: 20px 40px; /* Tamaño del botón */
             font-size: 16px;
             background-color: #000;
             color: white;
             border: none;
             cursor: pointer;
+            margin-bottom: 20px; /* Separar el botón del título */
         }
         .menu-button:hover {
             background-color: #444;
@@ -112,7 +116,6 @@
         }
         @media (max-width: 768px) {
             .menu-button {
-                left: 10px;
                 padding: 10px 20px;
             }
             h1 {
@@ -126,19 +129,11 @@
 </head>
 <body>
 
-<header class="wrapper">
-    <div class="dropdown">
+<header>
+    <div class="wrapper">
         <button class="menu-button" onclick="toggleMenu()">Menú</button>
-        <div id="dropdownContent" class="dropdown-content">
-            <a href="https://imagif.github.io/VESTIDOS/index.html">Inicio</a>
-            <a href="vestido-de-verano" target="_blank">Vestido de Verano</a>
-            <a href="vestido-de-fiesta" target="_blank">Vestido de Fiesta</a>
-            <a href="vestido-casual" target="_blank">Vestido Casual</a>
-            <a href="vestido-formal" target="_blank">Vestido Formal</a>
-            <a href="vestido-bohemio" target="_blank">Vestido Bohemio</a>
-        </div>
+        <h1>Estilos de Vestidos Populares</h1>
     </div>
-    <h1>Estilos de Vestidos Populares</h1>
 </header>
 
 <div class="wrapper">
@@ -208,8 +203,10 @@
     </div>
 </div>
 
-<footer class="wrapper">
-    2024 &copy; Estilos de Vestidos Populares
+<footer>
+    <div class="wrapper">
+        2024 &copy; Estilos de Vestidos Populares
+    </div>
 </footer>
 
 <script>
