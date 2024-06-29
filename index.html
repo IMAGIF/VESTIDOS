@@ -41,7 +41,6 @@
             max-width: 100%;
         }
         .menu-button {
-            position: relative;
             align-self: flex-start; /* Alineación a la izquierda */
             padding: 10px 20px; /* Tamaño del botón */
             font-size: 16px;
@@ -53,6 +52,10 @@
         }
         .menu-button:hover {
             background-color: #444;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
         }
         .dropdown-content {
             display: none;
@@ -133,7 +136,17 @@
 <header>
     <div class="wrapper">
         <h1>Estilos de Vestidos Populares</h1>
-        <button class="menu-button" onclick="toggleMenu()">Menú</button>
+        <div class="dropdown">
+            <button class="menu-button" onclick="toggleMenu()">Menú</button>
+            <div id="dropdownContent" class="dropdown-content">
+                <a href="https://imagif.github.io/VESTIDOS/index.html" target="_blank">Inicio</a>
+                <a href="https://amzn.to/3zolLEd" target="_blank">Vestido de Verano</a>
+                <a href="vestido-de-fiesta" target="_blank">Vestido de Fiesta</a>
+                <a href="vestido-casual" target="_blank">Vestido Casual</a>
+                <a href="vestido-formal" target="_blank">Vestido Formal</a>
+                <a href="vestido-bohemio" target="_blank">Vestido Bohemio</a>
+            </div>
+        </div>
     </div>
 </header>
 
