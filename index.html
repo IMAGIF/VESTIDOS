@@ -28,27 +28,28 @@
             align-items: center;
         }
         header {
-            padding: 60px 0; /* Altura de la cabecera ajustada */
+            padding: 20px 0; /* Reducido para acomodar mejor los elementos */
         }
         h1 {
             margin: 0;
-            font-size: 2em; /* Tamaño de fuente reducido */
+            font-size: 2em; /* Tamaño de fuente */
         }
         h2 {
             margin: 10px 0 20px;
             font-size: 1.2em;
-            text-align: center; /* Alineación centrada */
-            max-width: 100%; /* Ajuste máximo al ancho del contenedor */
+            text-align: center;
+            max-width: 100%;
         }
         .menu-button {
             position: relative;
-            padding: 20px 40px; /* Tamaño del botón */
+            align-self: flex-start; /* Alineación a la izquierda */
+            padding: 10px 20px; /* Tamaño del botón */
             font-size: 16px;
             background-color: #000;
             color: white;
             border: none;
             cursor: pointer;
-            margin-bottom: 20px; /* Separar el botón del título */
+            margin-top: 20px; /* Separar el botón del título */
         }
         .menu-button:hover {
             background-color: #444;
@@ -92,7 +93,7 @@
         }
         .item div {
             flex: 1;
-            max-width: 400px; /* Reduce el ancho de la descripción */
+            max-width: 400px;
         }
         .item h3 {
             margin: 0;
@@ -119,7 +120,7 @@
                 padding: 10px 20px;
             }
             h1 {
-                font-size: 1.5em; /* Reducir tamaño de fuente en dispositivos pequeños */
+                font-size: 1.5em;
             }
             .container {
                 grid-template-columns: 1fr;
@@ -131,8 +132,8 @@
 
 <header>
     <div class="wrapper">
-        <button class="menu-button" onclick="toggleMenu()">Menú</button>
         <h1>Estilos de Vestidos Populares</h1>
+        <button class="menu-button" onclick="toggleMenu()">Menú</button>
     </div>
 </header>
 
