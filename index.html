@@ -16,12 +16,16 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        header {
+        header, footer {
             background-color: #002366; /* Azul oscuro */
             color: white;
-            padding: 40px 0; /* Aumenta la altura de la cabecera */
             position: relative;
             text-align: center;
+            width: calc(100% - 40px); /* Ajuste al ancho de la sección de contenido */
+            margin: 0 auto; /* Centra el contenido */
+        }
+        header {
+            padding: calc(3 * 60px) 0; /* 3 veces la altura del botón */
         }
         h1 {
             margin: 0;
@@ -106,9 +110,6 @@
             background-color: #90c1e0;
         }
         footer {
-            background-color: #002366; /* Azul oscuro */
-            color: white;
-            text-align: center;
             padding: 10px 0;
         }
         @media (max-width: 768px) {
