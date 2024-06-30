@@ -11,47 +11,68 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        .wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header, footer {
-            background-color: #002366; /* Azul oscuro */
-            color: white;
-            text-align: center;
-            width: 100%;
-        }
-        header .wrapper, footer .wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         header {
-            padding: 20px 0; /* Reducido para acomodar mejor los elementos */
+            background-color: #002366; /* Azul oscuro */
+            color: white; /* Letra en blanco */
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
         }
         h1 {
             margin: 0;
-            font-size: 2em; /* Tamaño de fuente */
+            font-size: 2.5em;
         }
         h2 {
             margin: 10px 0 20px;
             font-size: 1.2em;
-            text-align: center;
-            max-width: 100%;
         }
-        .menu-button {
-            align-self: flex-start; /* Alineación a la izquierda */
-            padding: 10px 20px; /* Tamaño del botón */
-            font-size: 16px;
-            background-color: #000;
-            color: white;
-            border: none;
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 60px; /* Espacio inferior para evitar superposición con el pie de página */
+        }
+        .item {
+            display: contents;
+        }
+        .item img {
+            width: 150px;
+            height: auto;
             cursor: pointer;
-            margin-top: 20px; /* Separar el botón del título */
+            margin: 0 auto;
+            display: block;
         }
-        .menu-button:hover {
-            background-color: #444;
+        .item div {
+            flex: 1;
+            max-width: 400px; /* Reduce el ancho de descripción */
+        }
+        .item h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .item p {
+            margin: 10px 0;
+        }
+        .item button {
+            padding: 10px 20px;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .item button:hover {
+            background-color: #90c1e0;
+        }
+        footer {
+            background-color: #002366; /* Azul oscuro */
+            color: white; /* Letra en blanco */
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
         }
         .dropdown {
             position: relative;
@@ -75,152 +96,105 @@
         .dropdown-content a:hover {
             background-color: #575757;
         }
+        .dropdown button {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .dropdown button:hover {
+            background-color: #444;
+        }
         .show {
             display: block;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            padding: 20px 0;
-        }
-        .item {
-            display: contents;
-        }
-        .item img {
-            width: 150px;
-            height: auto;
-            cursor: pointer;
-            margin: 0 auto;
-            display: block;
-        }
-        .item div {
-            flex: 1;
-            max-width: 400px;
-        }
-        .item h3 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-        .item p {
-            margin: 10px 0;
-        }
-        .item button {
-            padding: 10px 20px;
-            background-color: #add8e6;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .item button:hover {
-            background-color: #90c1e0;
-        }
-        footer {
-            padding: 10px 0;
-        }
-        @media (max-width: 768px) {
-            .menu-button {
-                padding: 10px 20px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-            .container {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="wrapper">
-        <h1>Estilos de Vestidos Populares</h1>
-        <div class="dropdown">
-            <button class="menu-button" onclick="toggleMenu()">Menú</button>
-            <div id="dropdownContent" class="dropdown-content">
-                <a href="https://imagif.github.io/vestidos/index.html">Inicio</a>
-                <a href="de-verano">Vestido de Verano</a>
-                <a href="de-fiesta">Vestido de Fiesta</a>
-                <a href="casual">Vestido Casual</a>
-                <a href="formal">Vestido Formal</a>
-                <a href="bohemio">Vestido Bohemio</a>
-            </div>
+    <h1>Estilos de Vestidos Populares</h1>
+    <h2>Encuentra el mejor vestido para el momento adecuado y al mejor precio</h2>
+    <div class="dropdown">
+        <button onclick="toggleMenu()">Menú</button>
+        <div id="dropdownContent" class="dropdown-content">
+            <a href="https://imagif.github.io/vestidos/index.html">Inicio</a>
+            <a href="de-verano">Vestido de Verano</a>
+            <a href="de-fiesta">Vestido de Fiesta</a>
+            <a href="casual">Vestido Casual</a>
+            <a href="formal">Vestido Formal</a>
+            <a href="bohemio">Vestido Bohemio</a>
         </div>
     </div>
 </header>
 
-<div class="wrapper">
-    <h2>Encuentra el mejor vestido para el momento adecuado y al mejor precio</h2>
-
-    <div class="container">
-        <div class="item">
+<div class="container">
+    <div class="item">
+        <a href="de-verano" target="_blank">
+            <img src="imagen/de-verano/imagen1.jpg" alt="Vestido de Verano">
+        </a>
+        <div>
+            <h3>Vestido de Verano</h3>
+            <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
             <a href="de-verano" target="_blank">
-                <img src="imagen/de-verano/imagen1.jpg" alt="Vestido de Verano">
+                <button>Ver más</button>
             </a>
-            <div>
-                <h3>Vestido de Verano</h3>
-                <p>Vestido ligero y cómodo, ideal para climas cálidos, con variedad de diseños y colores.</p>
-                <a href="de-verano" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
         </div>
-        <div class="item">
+    </div>
+    <div class="item">
+        <a href="de-fiesta" target="_blank">
+            <img src="imagen/de-fiesta/imagen1.jpg" alt="Vestido de Fiesta">
+        </a>
+        <div>
+            <h3>Vestido de Fiesta</h3>
+            <p>Vestido elegante, utilizado para eventos y celebraciones, con detalles como lentejuelas o encajes.</p>
             <a href="de-fiesta" target="_blank">
-                <img src="imagen/de-fiesta/imagen1.jpg" alt="Vestido de Fiesta">
+                <button>Ver más</button>
             </a>
-            <div>
-                <h3>Vestido de Fiesta</h3>
-                <p>Vestido elegante, utilizado para eventos y celebraciones, con detalles como lentejuelas o encajes.</p>
-                <a href="de-fiesta" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
         </div>
-        <div class="item">
+    </div>
+    <div class="item">
+        <a href="casual" target="_blank">
+            <img src="imagen/casual/imagen1.jpg" alt="Vestido Casual">
+        </a>
+        <div>
+            <h3>Vestido Casual</h3>
+            <p>Vestido informal, adecuado para el día a día, con diseños simples y cómodos.</p>
             <a href="casual" target="_blank">
-                <img src="imagen/casual/imagen1.jpg" alt="Vestido Casual">
+                <button>Ver más</button>
             </a>
-            <div>
-                <h3>Vestido Casual</h3>
-                <p>Vestido informal, adecuado para el día a día, con diseños simples y cómodos.</p>
-                <a href="casual" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
         </div>
-        <div class="item">
+    </div>
+    <div class="item">
+        <a href="formal" target="_blank">
+            <img src="imagen/formal/imagen1.jpg" alt="Vestido Formal">
+        </a>
+        <div>
+            <h3>Vestido Formal</h3>
+            <p>Vestido adecuado para ocasiones formales y laborales, generalmente de colores sobrios.</p>
             <a href="formal" target="_blank">
-                <img src="imagen/formal/imagen1.jpg" alt="Vestido Formal">
+                <button>Ver más</button>
             </a>
-            <div>
-                <h3>Vestido Formal</h3>
-                <p>Vestido adecuado para ocasiones formales y laborales, generalmente de colores sobrios.</p>
-                <a href="formal" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
         </div>
-        <div class="item">
+    </div>
+    <div class="item">
+        <a href="bohemio" target="_blank">
+            <img src="imagen/bohemio/imagen1.jpg" alt="Vestido Bohemio">
+        </a>
+        <div>
+            <h3>Vestido Bohemio</h3>
+            <p>Vestido con estilo relajado y libre, a menudo con estampados florales y materiales sueltos.</p>
             <a href="bohemio" target="_blank">
-                <img src="imagen/bohemio/imagen1.jpg" alt="Vestido Bohemio">
+                <button>Ver más</button>
             </a>
-            <div>
-                <h3>Vestido Bohemio</h3>
-                <p>Vestido con estilo relajado y libre, a menudo con estampados florales y materiales sueltos.</p>
-                <a href="bohemio" target="_blank">
-                    <button>Ver más</button>
-                </a>
-            </div>
         </div>
     </div>
 </div>
 
 <footer>
-    <div class="wrapper">
-        2024 &copy; Estilos de Vestidos Populares
-    </div>
+    2024 &copy; Estilos de Vestidos Populares
 </footer>
 
 <script>
@@ -229,7 +203,7 @@
     }
 
     window.onclick = function(event) {
-        if (!event.target.matches('.menu-button')) {
+        if (!event.target.matches('.dropdown button')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             for (var i = 0; i < dropdowns.length; i++) {
                 var openDropdown = dropdowns[i];
